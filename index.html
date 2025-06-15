@@ -15,30 +15,24 @@
     <link href="style.css" rel="stylesheet">
   </head>
   <body id="body">
-    <div class="header p-5 d-flex justify-content-center shadow-lg top-0">
+    <div class="p-5 d-flex justify-content-center shadow-lg top-0 ">
       <h1 class="text-light">Color Switcher</h1>
     </div>
     <div
       style="position: absolute; left: 50vw; top: 50vh; transform: translate(-50%, -50%);">
-      <button class="button"  onclick="changeColor()">
+      <button class="button" onclick="changeColor()">
         <span class="label">Random Color</span>
         <span class="gradient-container">
           <span class="gradient"></span>
         </span>
       </button>
-      <p id="color" class="text-light m-3"></p>
+      <div class="card bg-dark mt-4">
+        <p id="rgb" class="color m-3"></p>
+        <p id="hex" class="color m-3"></p>
+      </div>
     </div>
-    <script>
-      $("#body").css("background", "#222");
-        function changeColor(){
-            const color1 = Math.round(Math.random()*206);
-            const color2 = Math.round(Math.random()*206);
-            const color3 = Math.round(Math.random()*206);
-            var color = `rgb(${color1}, ${color2}, ${color3})`;
-            $("#body").css("background", color);
-           $("#color").text(color);
-        }
-        $(".header").css("background", "#DDDDDD33")
+    <script src="script.js">
+    
     </script>
   </body>
 </html>
