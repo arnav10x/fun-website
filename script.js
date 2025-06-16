@@ -1,13 +1,15 @@
 $("#body").css("background", "#222");
+$("#colorCard").hide();
 function changeColor() {
-  const r = Math.round(Math.random() * 156)+100;
-  const g = Math.round(Math.random() * 156)+100;
-  const b = Math.round(Math.random() * 156)+100;
+  const r = Math.round(Math.random() * 156) + 100;
+  const g = Math.round(Math.random() * 156) + 100;
+  const b = Math.round(Math.random() * 156) + 100;
   var color = `rgb(${r}, ${g}, ${b})`;
   $("#body").css("background", color);
   $(".color").css("color", color);
   $("#rgb").text(color);
   $("#hex").text(rgbToHex(r, g, b));
+  $("#colorCard").show();
 }
 $(".header").css("background", "#DDDDDD33")
 function componentToHex(c) {
